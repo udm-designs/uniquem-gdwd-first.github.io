@@ -1,0 +1,56 @@
+/* general styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h1, h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Two Column Cards */
+#two-cards-section {
+    /*
+        By targetting the parent/container element of of cards and applying a display of flex to it, we allow the children to become flex-items that can be manipulated and position through flex properties.
+
+        Flex-wrap: wrap; will force the children to move down if there is no more room left for them in the space they originally started on. This is essential to get our cards to work the way we want them to.
+    */
+    display: flex;
+    flex-wrap: wrap;
+}
+.basic-card {
+    background-color: lavenderblush;
+    padding: 20px;
+    margin: 20px;
+    /* 
+        Due to the nature of flexbox and how it interacts with margin and padding, we need to use to calc function to subtract our margin combined with our padding from the width we want. Since we're aiming for a two column layout, this would be 50% - 40px.
+
+        The width, along with any margin or padding applied, are key to allowing our cards to actually display like cards or in a multi-column layout.
+
+        Note that while this is build to be a two column layout for our cards, this can easily become 3 or 4 columns by swapping out the 50% for 33.33% or 25%
+    */
+    width: calc(50% - 40px);
+}
+.basic-card hr {
+    border: none;
+    border-bottom: 2px solid coral;
+    margin: 10px 0;
+}
+.basic-card .linkbtn {
+    display: block;
+    background-color: coral;
+    border: 2px solid coral;
+    color: black;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all .5s;
+}
+.basic-card .linkbtn:hover {
+    background-color: transparent;
+    border: 2px solid coral;
+    color: coral;
+}
