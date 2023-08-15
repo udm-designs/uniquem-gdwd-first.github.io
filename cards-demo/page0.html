@@ -1,63 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cards Layout (Demo)</title>
-    <link href="css/page0.css" rel="stylesheet">
-</head>
-<body>
-    <h1>Cards</h1>
-    <h3>Two Column Layout Cards</h3>
-    <section id="two-cards-section">
-        <div class="basic-card">
-            <h2>Basic Title</h2>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores.
-            </p>
-            <a href="#" class="linkbtn">Button</a>
-        </div>
-        <div class="basic-card">
-            <h2>Basic Title</h2>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores.
-            </p>
-            <a href="#" class="linkbtn">Button</a>
-        </div>
-        <div class="basic-card">
-            <h2>Basic Title</h2>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores.
-            </p>
-            <a href="#" class="linkbtn">Button</a>
-        </div>
-        <div class="basic-card">
-            <h2>Basic Title</h2>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores.
-            </p>
-            <a href="#" class="linkbtn">Button</a>
-        </div>
-        <div class="basic-card">
-            <h2>Basic Title</h2>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores.
-            </p>
-            <a href="#" class="linkbtn">Button</a>
-        </div>
-        <div class="basic-card">
-            <h2>Basic Title</h2>
-            <hr>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit dolores.
-            </p>
-            <a href="#" class="linkbtn">Button</a>
-        </div>
-    </section>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cards, Buttons, and Gradients</title>
+        <link href="css/page0.css" rel="stylesheet">
+    </head>
+    <body>
+        <main>
+            <h3>Cards in a Two Column Layout</h3>
+            <!-- Two Cards Section -->
+            <!-- 
+                The section will contain our cards, allowing us to create a multi-column layout with our cards. We can give this section an ID to differentiate it from other sections that may utilize multi-column layouts and/or cards.
+
+                The cards themselves are made up of a overall parent container: the div with a class and id. The id will allow us to add and edit styles on that specific card while the class will allow us to add and edit styles for all of the cards inside of this section.
+
+                The card is made up of an image container with an img element inside of it, a heading element, a paragraph elemnent, and a link or button element.
+
+                By default, our img elements are inline and will come in at their default size. This can often be too large or small for the overall container. To deal with this, we can wrap our img element in a div which will act as a container for that element once the appropriate styles are applied. Divs are block element by default and will take up 100% of it's parent's width. This makes it much easier to create cards with images.
+            -->
+            <section id="two-cards">
+                <div id="c1" class="card">
+                    <div class="img-container">
+                        <img src="images/concealer.jpg" alt="photo of a makeup brush and concealer">
+                    </div>
+                    <h2>This is a card</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos aperiam ullam recusandae minima omnis, quae reiciendis at id veritatis fugit provident odio distinctio illum nostrum eos exercitationem beatae possimus iusto.</p>
+                    <a href="#" class="linkbtn">Button</a>
+                </div>
+                <div id="c2" class="card">
+                    <div class="img-container">
+                        <img src="images/lipstick.jpg" alt="photo of a makeup brush and concealer">
+                    </div>
+                    <h2>This is a card</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos aperiam ullam recusandae minima omnis, quae reiciendis at id veritatis fugit provident odio distinctio illum nostrum eos exercitationem beatae possimus iusto.</p>
+                    <a href="#" class="linkbtn">Button</a>
+                </div>
+                <div id="c3" class="card">
+                    <div class="img-container">
+                        <img src="images/eyeshadow.jpg" alt="photo of a makeup brush and concealer">
+                    </div>
+                    <h2>This is a card</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos aperiam ullam recusandae minima omnis, quae reiciendis at id veritatis fugit provident odio distinctio illum nostrum eos exercitationem beatae possimus iusto.</p>
+                    <a href="#" class="linkbtn">Button</a>
+                </div>
+                <div id="c4" class="card">
+                    <div class="img-container">
+                        <img src="images/blush.jpg" alt="photo of a makeup brush and concealer">
+                    </div>
+                    <h2>This is a card</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos aperiam ullam recusandae minima omnis, quae reiciendis at id veritatis fugit provident odio distinctio illum nostrum eos exercitationem beatae possimus iusto.</p>
+                    <a href="#" class="linkbtn">Button</a>
+                </div>
+            </section>
+        </main>
+    </body>
 </html>
