@@ -1,0 +1,65 @@
+/* 
+    Questions
+    1. should we be teaching them to use gap property with flexbox?
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+} */
+
+/*
+    The styles below allow our img elements to fill their container instead of overflowing out of it. Object-fit: cover; allows us to keep the image proportionate.
+*/
+.img-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/*
+    Setting the parent/container to flex will allow it's children to become flex items, thus allowing us to manipulate and position them using flex properties on the parent and some flex properties on the child if need be.
+    Flex-wrap: wrap; will allow our flex items to wrap whenever there is no more space on the row. It allows for a bit of responsiveness.
+*/
+#two-cards {
+    display: flex;
+    flex-wrap: wrap;
+}
+#two-cards .card {
+    margin: 24px;
+    width: calc(50% - 24px);
+    flex: 1;
+}
+.card p {
+    margin: 10px 0;
+}
+
+/* 
+    The styles below will make our anchor elements with the .linkbtn class look like buttons visually. This helps them stand out and keep them functional.
+
+    What gives our anchor element the look and feel of a button is the padding, background-color, text-align, and transition properties. The other styles contribute as well, but the styles mention are the baseline.
+
+    Transition allows for a smooth hover effect. It must be applied to the default state of an element for it to work properly in most cases.
+*/
+.linkbtn {
+    background-color: coral;
+    border: 2px solid coral;
+    padding: 10px 20px;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: all .5s ease-in-out;
+}
+.linkbtn:hover {
+    background-color: transparent;
+    border: 2px solid coral;
+    color: coral;
+}
