@@ -7,11 +7,15 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* section {
+main {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
-} */
+}
+h3 {
+    text-align: center;
+    margin: 40px 0 10px 0;
+}
 
 /*
     The styles below allow our img elements to fill their container instead of overflowing out of it. Object-fit: cover; allows us to keep the image proportionate.
@@ -30,11 +34,18 @@
     display: flex;
     flex-wrap: wrap;
 }
+/* 
+    For the cards themselves, they'll carry the same general styles. We can give them a padding and then a width to create columns. 
+    Below, we set each card to have a width that is 50% of it's parent's width. 
+    Then to give them some spacing, we applied 15px of padding all around each card. 
+    Remember, the 15px will add up between each card, totaling to 30px of spacing between each card but only 15px of spacing on the sides that don't have another card adjacent to it.
+    We can also change the width to fit the amount of columns we want. We can have 3 columns by setting it to 33.33% or 4 columns by setting it to 25%.
+*/
 #two-cards .card {
-    margin: 24px;
-    width: calc(50% - 24px);
-    flex: 1;
+    width: 50%;
+    padding: 15px;
 }
+
 .card p {
     margin: 10px 0;
 }
