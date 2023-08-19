@@ -18,24 +18,15 @@ h3 {
     flex-wrap: wrap;
     justify-content: center;
 }
-
+/*
+    Now, I think our first card is fully fleshed out. Let's move to our html and create some additional ones!
+*/
 .card {
     width: 50%;
     border: 1.5px solid #ffe4da;
     border-radius: 5px;
     padding: 10px;
     box-shadow: -3px 3px 10px #ddd;
-    /*
-        Now, let's also add a nice, subtle gradient to it to make it appear as if it has a shiny texture.
-
-        We're going to be using the background property and the linear-gradient value for this.
-
-        The background property is a shorthand CSS property that sets all background style properties at once, such as color, image, origin and size, or repeat method. This is how we create images with overlays on them as well.
-
-        The linear-gradient is a css function that creates an 'image' consisting of a progressive transition between two or more colors along a straight line. In otherwords, it makes a linear gradient. 
-
-        There are a few different types of values for the different kinds of gradients you can make with this function but for this demo, we're going to make a Color Stop gradient using 1 degree value and 3 color values like below within the parenthesis.
-    */
     background: linear-gradient(-50deg, #ffdbdb,#fff7f7, #ffc9c9);
 }
 .card img {

@@ -46,25 +46,28 @@ h3 {
     font-size: 20px;
     text-align: center;
     padding: 10px;
+    /*
+        To fix the first issue, let's add the border property and value to our default anchor-btn's state. This will allow the 3px of border width to have already been present, thus removing the shift in height.
+    */
+    border: 3px solid lightcoral;
+    /*
+        For the second issue, let's use the transition property. The transition property is shorthand for transition-property, transition-duration, transition-timing-function, and transition-delay. It allows us to create smooth transitions between the different states of elements.
+
+        For now, we're going to add background-color as the property we want to transition and then have it transition in .5 seconds. We'll add a comma to target an additional property and add the color property and have it transition in .5s as well.
+
+        This will create a smooth transition for the property that are being changed on hover.
+    */
+    transition:
+        background-color .5s,
+        color .5s;
 }
-/*
-    Let's start by making our anchor more interactive.
-
-    We'll targer our anchor elements hover state by targetting the :hover psuedo-class. To do this, we write the element that we're giving a hover state to, which would be the .anchor-btn, and then we attach :hover to it without any spaces or dashes between the element and the :hover.
-
-    Let's then apply a transparent background-color, a text color that matches the previous background color, and a solid border of 3px.
-*/
 .anchor-btn:hover {
     background-color: transparent;
     color: lightcoral;
-    border: 3px solid lightcoral;
+    /*
+        We'll remove the border properties from this selector and move it to the main selector for this element above. 
+    */
 }
 /*
-    Now when your cursor hovers over our anchor, it should change it's appearance. However, two things to note: 
-    
-    1. Notice how our anchor shifts in size a bit when we hover. This is because we changed the border width from it's default 0px to 3px on the hover state. 
-
-    2. Notice how the hover effect feels a bit harsh instead of having a nice smooth transition. This is because by default, there is not transition applied to the element.
-
-    Let's fix these in the next steps.
+    Now that our button is all fleshed out, let's add some additional styling to the card.
 */

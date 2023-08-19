@@ -20,25 +20,25 @@ h3 {
 }
 
 .card {
-    /*
-        To get some breathing room between our cards, lets give them a shorthand margin of 0px top, 25px right, 25px bottom, and 0px left.
-
-        You'll notice that our cards now no longer sit beside each other. That's because the width we set on them are not taking the margins we've added into account. Let's fix that
-    */
     margin: 0 25px 25px 0;
-    /*
-        What we can do to fix that issue is to use the calc() function. The calc() function lets you perform calculations when specifying CSS property values. It can be used with length, frequency, angle, time, percentage, number, or integer values.
-
-        Let's add a calc(50% - 25px) value to our width. This is telling our card to be the width of whatever 25px subtracted from 50% of our card's container's width is. Basically doing the math for us. 
-
-        Our cards should sit side by side once more. However, if you look at our second card, you'll see it has more space to the rigth side of it compared to the left side of our first card. This is because the margin we added is targetting all cards instead of the first ones in each row. We can fix this in the next step.
-    */
     width: calc(50% - 25px);
     border: 1.5px solid #ffe4da;
     border-radius: 5px;
     padding: 10px;
     box-shadow: -3px 3px 10px #ddd;
     background: linear-gradient(-50deg, #ffdbdb,#fff7f7, #ffc9c9);
+}
+/*
+    There's a few ways we can fix our previous issue above but we're going to utilize the nth-of-type pseudo-class for our fix.
+
+    We'll first target our .card and the attach a :nth-of-type() to it without any spaces. In the parenthesis, we want to target each even card and remove the right margin from it. To do that, we can put 2n or even inside the parenthesis. 2n means every second card and even means every even card. They're not always interchangeable as the number value before the n can be any number, even or odd.
+
+    Now, let's add a margin-right property and set it's value to 0px.
+
+    Now our cards no longer have unequal spacing on their outer edges. Let's head to the html and add some more cards now.
+*/
+.card:nth-of-type(2n) {
+    margin-right: 0px;
 }
 .card img {
     width: 100%;

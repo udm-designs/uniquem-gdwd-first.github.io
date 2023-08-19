@@ -21,24 +21,22 @@ h3 {
 
 .card {
     width: 50%;
-    /*
-        Let's give our card a 1.5px solid off-white pinkish border with a radius of 5px. We're aiming for a soft elegant effect here.
-
-        Let's also give it some padding to let the content breathe.
-    */
     border: 1.5px solid #ffe4da;
     border-radius: 5px;
     padding: 10px;
-    /*
-        Now, let's make our card look like it has some depth to it. We'll apply a box-shadow property to it with 4 values: -3px, 3px, 10px and another, lighter off-white color.
-
-        Box-shadow applies shadows to elements by using up to 5 values in this order: offset-x, offset-y, blur-radius,spread-radius, and color.
-
-        We're only using 4 values, which in this case are: offset-x, offset-y, blur-radius, and color.
-
-        Additionally, we can add a value of inset at the start to invert our shadows into the element if need be.
-    */
     box-shadow: -3px 3px 10px #ddd;
+    /*
+        Now, let's also add a nice, subtle gradient to it to make it appear as if it has a shiny texture.
+
+        We're going to be using the background property and the linear-gradient value for this.
+
+        The background property is a shorthand CSS property that sets all background style properties at once, such as color, image, origin and size, or repeat method. This is how we create images with overlays on them as well.
+
+        The linear-gradient is a css function that creates an 'image' consisting of a progressive transition between two or more colors along a straight line. In otherwords, it makes a linear gradient. 
+
+        There are a few different types of values for the different kinds of gradients you can make with this function but for this demo, we're going to make a Color Stop gradient using 1 degree value and 3 color values like below within the parenthesis.
+    */
+    background: linear-gradient(-50deg, #ffdbdb,#fff7f7, #ffc9c9);
 }
 .card img {
     width: 100%;

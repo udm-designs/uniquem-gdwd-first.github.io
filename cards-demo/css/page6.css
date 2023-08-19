@@ -21,6 +21,24 @@ h3 {
 
 .card {
     width: 50%;
+    /*
+        Let's give our card a 1.5px solid off-white pinkish border with a radius of 5px. We're aiming for a soft elegant effect here.
+
+        Let's also give it some padding to let the content breathe.
+    */
+    border: 1.5px solid #ffe4da;
+    border-radius: 5px;
+    padding: 10px;
+    /*
+        Now, let's make our card look like it has some depth to it. We'll apply a box-shadow property to it with 4 values: -3px, 3px, 10px and another, lighter off-white color.
+
+        Box-shadow applies shadows to elements by using up to 5 values in this order: offset-x, offset-y, blur-radius,spread-radius, and color.
+
+        We're only using 4 values, which in this case are: offset-x, offset-y, blur-radius, and color.
+
+        Additionally, we can add a value of inset at the start to invert our shadows into the element if need be.
+    */
+    box-shadow: -3px 3px 10px #ddd;
 }
 .card img {
     width: 100%;
@@ -46,17 +64,7 @@ h3 {
     font-size: 20px;
     text-align: center;
     padding: 10px;
-    /*
-        To fix the first issue, let's add the border property and value to our default anchor-btn's state. This will allow the 3px of border width to have already been present, thus removing the shift in height.
-    */
     border: 3px solid lightcoral;
-    /*
-        For the second issue, let's use the transition property. The transition property is shorthand for transition-property, transition-duration, transition-timing-function, and transition-delay. It allows us to create smooth transitions between the different states of elements.
-
-        For now, we're going to add background-color as the property we want to transition and then have it transition in .5 seconds. We'll add a comma to target an additional property and add the color property and have it transition in .5s as well.
-
-        This will create a smooth transition for the property that are being changed on hover.
-    */
     transition:
         background-color .5s,
         color .5s;
@@ -64,10 +72,4 @@ h3 {
 .anchor-btn:hover {
     background-color: transparent;
     color: lightcoral;
-    /*
-        We'll remove the border properties from this selector and move it to the main selector for this element above. 
-    */
 }
-/*
-    Now that our button is all fleshed out, let's add some additional styling to the card.
-*/

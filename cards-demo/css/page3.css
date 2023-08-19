@@ -27,12 +27,6 @@ h3 {
     height: 150px;
     object-fit: cover;
 }
-/*
-    Let's also style our h2 and p element.
-    For the h2, let's give it a font-size of 36px and a margin-top to get some breathing room in-between the h2 and the img's div container.
-
-    Then, let's change the paragraphs font-family to a sans-serif for some contrast. Let's also set the font-size to 18px and the margin to 15px on the top/bottom and 0px on the left/right. This will space add some spacing between the elements above and below the paragraph.
-*/
 .card h2 {
     font-size: 36px;
     margin-top: 10px;
@@ -42,3 +36,27 @@ h3 {
     font-size: 18px;
     margin: 15px 0;
 }
+
+/*
+    Now let's make our anchor element stand out more and look like a button.
+
+    We'll target the .anchor-btn class and give it a display of block to have it strecth 100% of it's containers width. Alternatively, if you can use inline-block if you don't wish to have it stretch,
+
+    Then let's stylize it by giving it a background-color, color, removing the text-decoration, giving it a bold font-weight and font-size of 20px.
+
+    Then, let's fix it's alignment by having the text align center and giving some padding to add some spacing on the top and bottom of the content. We can also add spacing on the left/right of the content to give it a minimum size.
+*/
+.anchor-btn {
+    display: block;
+    background-color: lightcoral;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+}
+
+/*
+    Now technically, our first card is done! However, let's make our anchor element a bit more interactive and also make our card look more aesthetically pleasing.
+*/

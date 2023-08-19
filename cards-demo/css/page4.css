@@ -37,15 +37,6 @@ h3 {
     margin: 15px 0;
 }
 
-/*
-    Now let's make our anchor element stand out more and look like a button.
-
-    We'll target the .anchor-btn class and give it a display of block to have it strecth 100% of it's containers width. Alternatively, if you can use inline-block if you don't wish to have it stretch,
-
-    Then let's stylize it by giving it a background-color, color, removing the text-decoration, giving it a bold font-weight and font-size of 20px.
-
-    Then, let's fix it's alignment by having the text align center and giving some padding to add some spacing on the top and bottom of the content. We can also add spacing on the left/right of the content to give it a minimum size.
-*/
 .anchor-btn {
     display: block;
     background-color: lightcoral;
@@ -56,7 +47,24 @@ h3 {
     text-align: center;
     padding: 10px;
 }
-
 /*
-    Now technically, our first card is done! However, let's make our anchor element a bit more interactive and also make our card look more aesthetically pleasing.
+    Let's start by making our anchor more interactive.
+
+    We'll targer our anchor elements hover state by targetting the :hover psuedo-class. To do this, we write the element that we're giving a hover state to, which would be the .anchor-btn, and then we attach :hover to it without any spaces or dashes between the element and the :hover.
+
+    Let's then apply a transparent background-color, a text color that matches the previous background color, and a solid border of 3px.
+*/
+.anchor-btn:hover {
+    background-color: transparent;
+    color: lightcoral;
+    border: 3px solid lightcoral;
+}
+/*
+    Now when your cursor hovers over our anchor, it should change it's appearance. However, two things to note: 
+    
+    1. Notice how our anchor shifts in size a bit when we hover. This is because we changed the border width from it's default 0px to 3px on the hover state. 
+
+    2. Notice how the hover effect feels a bit harsh instead of having a nice smooth transition. This is because by default, there is not transition applied to the element.
+
+    Let's fix these in the next steps.
 */

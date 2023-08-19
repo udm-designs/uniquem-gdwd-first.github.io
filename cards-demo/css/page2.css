@@ -19,26 +19,26 @@ h3 {
     justify-content: center;
 }
 
-/*
-    Now let's start building our cards. First, let's target our card class and give it a width of 50%. We won't see much of a change because the only content we have is overflowing. Let's fix that.
-*/
 .card {
     width: 50%;
 }
-
-/*
-    To fix the issue with the giant image, let's target the img element inside of our cards. Since we wrapped the img element in a div, we should have an easier time controlling it's sizing.
-
-    Let's give the img a width of 100% so that the image is always 100% of it's container. 
-
-    Remember, the div we wrapped our image in is a block element by default which means it will also only be 100% of it's container.
-
-    Now that our image is appropriately sized and no longer leaking out of it's container, let's apply a height to it. Since the image-container div doesn't have a height of it's own, it will take the total height of it's children. Applying this height will also keep our different images in different cards from being different heights.
-
-    Finally, due to using a set height, it can be easy for the image to stop scaling proportionately. To fix this, we'll add a object-fit property with a value of cover that will
-*/
 .card img {
     width: 100%;
     height: 150px;
     object-fit: cover;
+}
+/*
+    Let's also style our h2 and p element.
+    For the h2, let's give it a font-size of 36px and a margin-top to get some breathing room in-between the h2 and the img's div container.
+
+    Then, let's change the paragraphs font-family to a sans-serif for some contrast. Let's also set the font-size to 18px and the margin to 15px on the top/bottom and 0px on the left/right. This will space add some spacing between the elements above and below the paragraph.
+*/
+.card h2 {
+    font-size: 36px;
+    margin-top: 10px;
+}
+.card p {
+    font-family: sans-serif;
+    font-size: 18px;
+    margin: 15px 0;
 }
