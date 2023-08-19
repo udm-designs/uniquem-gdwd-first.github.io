@@ -28,8 +28,11 @@ h3 {
     Let's start setting up our two column layout. By applying a display of flex to the section, we turn it into a flex-container and anything we place inside it will become a flex-child. We can now use flex properties to manipulate it's children.
 
     The first property we'll add is flex-wrap with a value of wrap so that our flex-children wrap appropriately when there is not more spacing for them on a row.
+
+    Then, let's add a justify-content: center; declaration to center our cards within their container. We'll working on the spacing between them later on.
 */
 #two-column {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }

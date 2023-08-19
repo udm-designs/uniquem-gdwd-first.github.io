@@ -20,25 +20,25 @@ h3 {
 }
 
 .card {
-    width: 50%;
-    /*
-        Let's give our card a 1.5px solid off-white pinkish border with a radius of 5px. We're aiming for a soft elegant effect here.
-
-        Let's also give it some padding to let the content breathe.
-    */
+    margin: 0 25px 25px 0;
+    width: calc(50% - 25px);
     border: 1.5px solid #ffe4da;
     border-radius: 5px;
     padding: 10px;
-    /*
-        Now, let's make our card look like it has some depth to it. We'll apply a box-shadow property to it with 4 values: -3px, 3px, 10px and another, lighter off-white color.
-
-        Box-shadow applies shadows to elements by using up to 5 values in this order: offset-x, offset-y, blur-radius,spread-radius, and color.
-
-        We're only using 4 values, which in this case are: offset-x, offset-y, blur-radius, and color.
-
-        Additionally, we can add a value of inset at the start to invert our shadows into the element if need be.
-    */
     box-shadow: -3px 3px 10px #ddd;
+    background: linear-gradient(-50deg, #ffdbdb,#fff7f7, #ffc9c9);
+}
+/*
+    There's a few ways we can fix our previous issue above but we're going to utilize the nth-of-type pseudo-class for our fix.
+
+    We'll first target our .card and the attach a :nth-of-type() to it without any spaces. In the parenthesis, we want to target each even card and remove the right margin from it. To do that, we can put 2n or even inside the parenthesis. 2n means every second card and even means every even card. They're not always interchangeable as the number value before the n can be any number, even or odd.
+
+    Now, let's add a margin-right property and set it's value to 0px.
+
+    Now our cards no longer have unequal spacing on their outer edges. Let's head to the html and add some more cards now.
+*/
+.card:nth-of-type(2n) {
+    margin-right: 0px;
 }
 .card img {
     width: 100%;

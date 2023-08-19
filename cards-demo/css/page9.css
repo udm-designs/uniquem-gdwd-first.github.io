@@ -16,6 +16,7 @@ h3 {
 #two-column {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 /*
     Now, I think our first card is fully fleshed out. Let's move to our html and create some additional ones!
