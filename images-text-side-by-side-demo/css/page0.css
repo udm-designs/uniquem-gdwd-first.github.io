@@ -8,31 +8,25 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 /*
-    Let's target our main element and give it a width of 90vw so that it repsonsively resizes with the viewport, a max-width of 800px so that for larger screens it doesn't look awkward and finally a margin with 0 top/bottom and auto left/right to center our main element.
+    Since we'll be putting most of our images in divs and we don't want them to be super large, let's reset all img's inside of divs to be 100% of their container. Remember, their container's need to have a width on them as well for this to work the way we intend it it.
+
+    This isn't 100% necessary and can be temporary as you'll most likely change the images size based on the area it's in. However, this will keep the image from being too large and making it difficult to see changes you make before you change it's size.
 */
-main {
-    width: 90vw;
-    max-width: 800px;
+div img { 
+    width: 100%;
+}
+
+/*
+    Now let's give our basic-example div a width of 50% to make it smaller and a margin: 0 auto; to center the div itself on the page.
+
+    Then, let's apply a display of flex to it to turn our basic-example into a flex parent and it's children into flex children.
+
+    Now our image and p element should be side by side without much  additonal styling. This is because by default, our flex container's direction is set to row.
+*/
+#basic-example {
+    width: 50%;
     margin: 0 auto;
-}
-/*
-    Let's also align our h3 in the center and give it some top and bottom margin for some better spacing.
-*/
-h3 {
-    text-align: center;
-    margin: 24px 0;
-}
-
-/*
-    Let's start setting up our two column layout. By applying a display of flex to the section, we turn it into a flex-container and anything we place inside it will become a flex-child. We can now use flex properties to manipulate it's children.
-
-    The first property we'll add is flex-wrap with a value of wrap so that our flex-children wrap appropriately when there is not more spacing for them on a row.
-
-    Then, let's add a justify-content: center; declaration to center our cards within their container. We'll working on the spacing between them later on.
-*/
-#two-column {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
 }

@@ -1,0 +1,20 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div img { 
+    width: 100%;
+}
+
+#basic-example {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    /*
+        If we wanted to center our text around our image vertically or vice-versa, we can apply align-items and give it a value of center.
+
+        It's important to note that if our flex-direction were column instead of row, then align-items would center them horizontally.
+    */
+    align-items: center;
+}
