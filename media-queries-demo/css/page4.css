@@ -1,6 +1,3 @@
-/* 
-    We'll start off with our usual page layout setup:
-*/
 * {
     box-sizing: border-box;
 }
@@ -68,4 +65,7 @@ body {
     you're positive everything is working if you want but
     keep in mind that you can always use it for troubleshooting
     if need be.
+
+    Now, let's move on and see media queries in action with some
+    actual content we need to make responsive.
 */

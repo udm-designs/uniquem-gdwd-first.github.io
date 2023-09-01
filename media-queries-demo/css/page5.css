@@ -1,0 +1,21 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+/*
+    Let's start by removing all of our media queries.
+    We'll be making new ones that better fit the site.
+
+    Then, let's
+*/
+#header, #footer {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+}
+
+/* removed all media queries */
