@@ -43,7 +43,10 @@ body {
     are met. Meaning, styles added here won't show up
     past a width of 768px.
 
-    Now let's get some styles in there.
+    We also refer to the max and min width media features
+    as breakpoints often.
+
+    Now, let's get a style in here.
 */
 @media screen and (max-width: 768px) {
 

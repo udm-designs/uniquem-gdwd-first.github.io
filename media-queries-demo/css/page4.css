@@ -59,3 +59,13 @@ body {
         background-color: red;
     }
 }
+/*
+    It is important to note that applying a background color
+    based on the breakpoints is a efficient and great
+    way to know exactly when we've passed from one breakpoint to another.
+    
+    You can remove the background colors at the end when
+    you're positive everything is working if you want but
+    keep in mind that you can always use it for troubleshooting
+    if need be.
+*/
