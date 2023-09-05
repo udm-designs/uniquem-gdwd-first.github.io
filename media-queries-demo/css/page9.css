@@ -98,6 +98,10 @@ body {
         screens, so we can fix that by adding a style here that
         changes the h1 to have a font-size of 2.75rem and the
         h3 to have a font-size of 1.125rem.
+
+        Our header text should fit much better now. Resize your
+        screen and notice how that style is unapplied whenever
+        our screen grows larger than 725px.
     */
     .hero-content h1 {
         font-size: 2.75rem;
@@ -105,4 +109,25 @@ body {
     .hero-content h3 {
         font-size: 1.125rem;
     }
+    /*
+        With our header done, let's change our gallery up as well.
+        A three-column gallery doesn't seem to do well at smaller
+        screens, so lets opt to change it for a two-column 
+        gallery instead.
+
+        Since we used CSS grid to create our gallery, we really only
+        have to change the amount of columns we have through the
+        grid-template-columns property. We can just remove one of
+        the units and we'll now have a two column gallery.
+
+        If we want to change the height as well, then we would just
+        change the amount we set on our grid-auto-rows property here.
+    */
+    #main .gallery {
+        grid-template-columns: 1fr 1fr;
+    }
 }
+/*
+    I think that's all we have to change for now to accomodate tablet
+    screen sizes. Let's move on to mobile devices.
+*/
