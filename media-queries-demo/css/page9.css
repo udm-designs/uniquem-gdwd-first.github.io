@@ -60,23 +60,10 @@ body {
     object-fit: cover;
 }
 
-/*
-    Now we can style our footer. We'll target the #footer
-    and give it a background color and margin top of 50px.
-*/
 #footer {
     background-color: #2f2f2f;
     margin-top: 50px;
 }
-
-/*
-    Then we'll target the #footer .links and give that a
-    width of 80vw, max-width of 1000px and a margin 0px auto.
-
-    We'll change the list-stype-type to none, have it display as
-    a flex, give it a gap of 25px and padding of 25px 0px. Then
-    we'll apply a justify-content of center.
-*/
 #footer .links {
     width: 80vw;
     max-width: 1000px;
@@ -87,16 +74,35 @@ body {
     padding: 25px 0px;
     justify-content: center;
 }
-
-/*
-    Finally, let's target the anchor elements inside of our .links.
-    We'll just change their color and remove their text-decoration.
-*/
 .links a{
     color: white;
     text-decoration: none;
 }
+
 /*
-    Now that we got some content on the page, let's start
-    making that content responsive.
+    Let's start by adjusting our header styles to fit smaller screens.
+    Our hero seems to look fine for anything above 725px but not anything
+    below that width. We know that a good range for tablet sizes is between 481px and 768px in width. Which means, our hero only looks fine for a few tablet models that have a viewport width higher than 725px, which is excluding a lot of devices. So, we'll have to create a breakpoint that will
+    adjust the styles for screens lower than 725px.
+
+    Do you remember how we can create a media query with a breakpoint of 725px?
+
+    We'll start by adding '@media screen and ()' then we'll call the condition
+    we want to set in-between the parenthesis, in this case, we want to use
+    'max-width: 725px', so these styles only get applied to the elements when
+    the viewport is at a width of 725px or below.
 */
+@media screen and (max-width: 725px) {
+    /*
+        Our font-sizes for our h1 and h3 are too big for smaller
+        screens, so we can fix that by adding a style here that
+        changes the h1 to have a font-size of 2.75rem and the
+        h3 to have a font-size of 1.125rem.
+    */
+    .hero-content h1 {
+        font-size: 2.75rem;
+    }
+    .hero-content h3 {
+        font-size: 1.125rem;
+    }
+}
