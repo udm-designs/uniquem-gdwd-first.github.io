@@ -20,13 +20,15 @@ body {
 
 /*
     Now, let's target our #header and add a height of 100vh, a
-    background-image, and a background-size of cover.
+    background-image, a background-size of cover, and a
+    background-position of center.
     This should give us the beginnings of a hero.
 */
 #header {
     height: 100vh;
     background-image: url(../images/hero.jpg);
     background-size: cover;
+    background-position: center;
 }
 
 /* removed all media queries */
