@@ -1,0 +1,64 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#header, #footer {
+    width: 100vw;
+}
+
+#header {
+    background-image: url(../images/hero.jpg);
+    background-size: cover;
+    height: 100vh;
+    /*
+        Let's center our hero content by adding a
+        display of flex here and using a justify-content
+        of center.
+
+        Then we can add a padding-top of 25px for some spacing.
+    */
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+/*
+    Let's target our h1 as well. We'll give it a
+    font-size of 4rem. Remember, rem is a relative unit
+    that is sized based on the root font size of an element.
+
+    We'll also add a font-weight of bold and give a margin
+    of 0px.
+*/
+.hero-content h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    margin: 0px;
+}
+
+/*
+    We can then target our anchor element and make it
+    look more like a button by giving it a display of
+    inline-block, a background color, text-decoration of none,
+    a color of white, a text-align of center, 10px of padding
+    on the top and bottom with 20px of padding on the left and right.
+    We'll finish it off with a font-size of 1.25rem.
+*/
+.hero-content a {
+    display: inline-block;
+    background-color: #bc480a;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 1.25rem;
+}
+
+/*
+    Our hero is done, let's move on to styling our
+    gallery.
+*/
