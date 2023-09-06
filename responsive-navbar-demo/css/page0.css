@@ -1,0 +1,99 @@
+/* 
+    We'll start off with our usual page layout setup:
+*/
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px;
+    font-family: sans-serif;
+}
+
+#header {
+    background-color: pink;
+}
+
+#navbar {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: block;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+    text-shadow: -2px 2px 2px #00000033;
+    color: rgb(0, 102, 109);
+    font-variant: small-caps;
+}
+
+#navbar ul {
+    list-style-type: none;
+    margin: 0px;
+}
+
+#ham-menu {
+    flex-direction: column;
+    width: 35px;
+    gap: 5px;
+    display: none;
+    height: 100%;
+}
+
+#ham-menu span {
+    display: block;
+    background-color: black;
+    height: 3px;
+    border-radius: 5px;
+}
+
+#navbar li .nav-links {
+    display: flex;
+    gap: 24px;
+    padding: 24px 0px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: black;
+}
+
+
+@media screen and (max-width: 620px) {
+    #ham-menu {
+        display: flex;
+    }
+    #mob-nav {
+        position: relative;
+        padding: 20px 0px;
+        cursor: pointer;
+    }
+    #navbar li .nav-links {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+        transition:
+            opacity 0.5s,
+            visibility 0.5s,
+            transform 0.5s;
+    }
+    #mob-nav:hover .nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0px);
+    }
+    #navbar li .nav-links {
+        flex-direction: column;
+        align-items: flex-end;
+        background-color: pink;
+        position: absolute;
+        top: 59px;
+        right: 0px;
+        padding: 10px 15px 24px 30px;
+    }
+}
