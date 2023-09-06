@@ -11,13 +11,18 @@ body {
 }
 
 #header {
-    background-image: url(../images/hero3.jpg);
+    background-image: url(../images/hero.jpg);
     background-size: cover;
     background-position: center;
     height: 100vh;
     display: flex;
     justify-content: center;
     padding-top: 100px;
+}
+.hero-content {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
 }
 .hero-content h1 {
     font-size: 4rem;
@@ -102,7 +107,6 @@ body {
 
 #footer {
     background-color: #2f2f2f;
-    margin-top: 50px;
 }
 #footer .links {
     width: 80vw;
@@ -119,84 +123,34 @@ body {
     text-decoration: none;
 }
 
+/*
+    Let's start by adjusting our header styles to fit smaller screens.
+    Our hero seems to look fine for anything above 725px but not anything
+    below that width. We know that a good range for tablet sizes is between 481px and 768px in width. Which means, our hero only looks fine for a few tablet models that have a viewport width higher than 725px, which is excluding a lot of devices. So, we'll have to create a breakpoint that will
+    adjust the styles for screens lower than 725px.
+
+    Do you remember how we can create a media query with a breakpoint of 725px?
+
+    We'll start by adding '@media screen and ()' then we'll call the condition
+    we want to set in-between the parenthesis, in this case, we want to use
+    'max-width: 725px', so these styles only get applied to the elements when
+    the viewport is at a width of 725px or below.
+*/
 @media screen and (max-width: 725px) {
+    /*
+        Our font-sizes for our h1 and h3 are too big for smaller
+        screens, so we can fix that by adding a style here that
+        changes the h1 to have a font-size of 2.75rem and the
+        h3 to have a font-size of 1.125rem.
+
+        Our header text should fit much better now. Resize your
+        screen and notice how that style is unapplied whenever
+        our screen grows larger than 725px.
+    */
     .hero-content h1 {
         font-size: 2.75rem;
     }
     .hero-content h3 {
         font-size: 1.125rem;
-    }
-    #main .gallery {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-/*
-    Since mobile screens are so compact in both width and height,
-    we'll be changing a lot more content for this breakpoint. 
-
-    The smallest phone screen is 320px, which is the Iphone SE 
-    first generation. A good breakpoint range for mobile screens
-    is 320px to 480px.
-
-    Now, resize your live server/preview to be around that size.
-    Do you see how small the screen is now? We have to adjust
-    most of our styles to fit the screen sizes.
-
-    So, for the styles we want to apply for mobile screens, what
-    breakpoint are we going to need to target?
-
-    We'll have to target an @media screen and (max-width: 480px).
-*/
-@media screen and (max-width: 480px) {
-    /*
-        We're going to want to lower our font-size for our h1 and h3 again.
-        we can set our h1 to 1.75rem and our h3 to 1rem.
-    */
-    .hero-content h1 {
-        font-size: 1.75rem;
-    }
-    .hero-content h3 {
-        font-size: 1rem;
-    }
-    /*
-        We should also make our button more centered and fill up that
-        space in which it's contained in.
-
-        We can do this by simply changing it's display to that of block.
-        Let's also change it's font size to 1.125rem.
-    */
-    .hero-content a {
-        display: block;
-        font-size: 1.125rem;
-    }
-
-    /*
-        Our gallery no longer works in multiple columns on small screens.
-        So, we'll have to adjust our grid-tempalte-columns to just be
-        a singular column rather than two.
-    */
-    #main .gallery {
-        grid-template-columns: 1fr;
-        /*
-            Due to the smaller viewport height as well, it wouldn't
-            hurt to adjust the grid-auto-rows to be smaller too.
-        */
-        grid-auto-rows: 250px;
-    }
-
-    /*
-        Our footer is going to need to be adjusted as well. You
-        can see that it no longer works with each link sitting
-        side by side. Instead, we'll need to switch to a stacked
-        layout.
-
-        Easy enough, since we used flexbox for our #footer .links,
-        we just need to add a flex-direction of column and apply
-        an align-items of center to get it horizontally centered.
-    */
-    #footer .links {
-        flex-direction: column;
-        align-items: center;
     }
 }

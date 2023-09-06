@@ -19,6 +19,11 @@ body {
     justify-content: center;
     padding-top: 100px;
 }
+.hero-content {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+}
 .hero-content h1 {
     font-size: 4rem;
     font-weight: bold;
@@ -80,41 +85,4 @@ body {
 */
 .promotion .content {
     flex: 1;
-}
-
-#main .cards {
-    display: flex;
-    height: 50vh;
-}
-
-.cards .card {
-    flex: 1;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#card-1 {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../images/pie.jpg);
-    background-position: center;
-    background-size: cover;
-}
-#card-2 {
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(../images/three-drinks.jpg);
-    background-position: center;
-    background-size: cover;
-}
-
-.cards a, .promotion a {
-    display: inline-block;
-    background-color: #00be06;
-    color: #fff;
-    text-decoration: none;
-    padding: 10px 20px;
-    text-align: center;
-}
-.promotion a {
-    display: block;
 }

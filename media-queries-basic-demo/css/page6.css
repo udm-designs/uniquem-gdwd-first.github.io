@@ -26,7 +26,16 @@ body {
     justify-content: center;
     padding-top: 100px;
 }
-
+/*
+    We can target our .hero-content and contain it within
+    our screen by applying a width of 80vw, a max-width
+    of 1000px and a margin of 0px auto.
+*/
+.hero-content {
+    width: 80vw;
+    max-width: 1000px;
+    margin: 0px auto;
+}
 /*
     Let's target our h1 as well. We'll give it a
     font-size of 4rem. Remember, rem is a relative unit
