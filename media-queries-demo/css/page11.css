@@ -109,32 +109,58 @@ img {
     grid-area: img4;
 }
 
-/*
-    Now, let's shrink our screens to about 768px. While our
-    header area looks pretty decent, our featured photos
-    area could use adjustments to it's grid once it reaches
-    that size and smaller.
-
-    Who can remember how to write a media query?
-
-    Yup, we'll need to start with the at-rule followed by
-    media screen and (max-width: 768px). We also would like
-    to avoid these styles getting applied to screens after
-    481px, so, how would we add an additional condition?
-
-    Yup, we'd just write "and" followed by another condition.
-    This time, we'll use min-width: 481px;. Now we have a
-    media query geared towards most tablet devices.
-
-    But, how can we be sure that our media query works? Pretty
-    simple actually. If we target the body and change it's 
-    background color in the media query, once we shrink or 
-    grow our screen that color should show or disappear. This
-    is a neat trick to make sure your media queries are working.
-*/
-
 @media screen and (max-width: 768px) and (min-width: 481px) {
+    /*
+        Let's remove the background color from our tablet
+        media query.
+    */
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "txt1 img1"
+            "img2 img2"
+            "img3 img3"
+            "img4 txt2"
+        ;
+    }
+}
+
+/*
+    Now, let's create a media query for smaller mobile devices.
+    We'll say a good breakpoint is 480px and smaller. Can anyone
+    tell me how we'd create a media query based off that condition?
+
+    Yup! We're going to add a @media screen and (max-width: 480px).
+    We don't need a minimum width for this media query. Let's
+    also add in our body background-color to make sure it's working.
+
+    Contrary to the tablet width, we seem to need changes on
+    every area for this media query. So, let's get into the
+    navigation first.
+
+    Now, we're not going to be creating a hamburger navigation
+    since that would require some extra coding knowledge you
+    don't have yet. No worries though because there are two ways
+    we can get our navigation to look good as the screen gets smaller
+    and both involve flexbox, which we already applied to our
+    navigation earlier.
+
+    The first way is to have the wrap using the flex-wrap: wrap;
+    property value pair.
+*/
+@media screen and (max-width: 480px) {
     body {
         background-color: red;
+    }
+    .nav {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .nav a {
+        color: white;
+        text-decoration: none;
+        font-size: 1.25rem;
+        padding: 20px 0px;
+        margin-right: 40px;
     }
 }

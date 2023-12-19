@@ -18,8 +18,9 @@ img {
 .nav a {
     color: white;
     text-decoration: none;
+    font-size: 1.25rem;
     padding: 20px 0px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 .nav a:last-of-type {
     margin-right: 0px;

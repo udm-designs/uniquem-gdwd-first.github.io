@@ -22,14 +22,15 @@ img {
     within a div that has a class of nav?
 
     Let's give it a color of white, a text-decoration of 
-    none, top and bottom padding of 20px and left and right
-    margin of 10px.
+    none, a font-size of 1.25rem top and bottom padding of
+    20px and left and right margin of 10px.
 */
 .nav a {
     color: white;
     text-decoration: none;
+    font-size: 1.25rem;
     padding: 20px 0px;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 /* 
     We'll also target what's called a psuedo-class by
