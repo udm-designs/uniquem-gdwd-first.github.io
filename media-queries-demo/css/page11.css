@@ -140,27 +140,52 @@ img {
 
     Now, we're not going to be creating a hamburger navigation
     since that would require some extra coding knowledge you
-    don't have yet. No worries though because there are two ways
-    we can get our navigation to look good as the screen gets smaller
-    and both involve flexbox, which we already applied to our
-    navigation earlier.
-
-    The first way is to have the wrap using the flex-wrap: wrap;
-    property value pair.
+    don't have yet. No worries though because there is a way
+    we can get our navigation to look good as the screen gets
+    smaller that involves flexbox, which we already applied
+    to our navigation earlier.
 */
 @media screen and (max-width: 480px) {
     body {
         background-color: red;
     }
+    /*
+        First, we'll have to target our .nav again. Now, do
+        we need to reapply flexbox here?
+
+        If you said no, then you are correct. Remember what
+        we said earlier how only the properties being changed
+        must be added inside of the media query.
+
+        Now, the way we can make our navigation look good on
+        smaller screens is to have it stack which is relatively
+        easy to do with flexbox. Does anyone remember the
+        property value pair that changes a the flow of flexbox
+        items to stack?
+
+        Yup! It's going to be flex-direction: column;. Now 
+        our nav items are stacking, however, they look a bit
+        odd on the left here, so, let's add an additional
+        property for text-align and make it centered.
+    */
     .nav {
-        flex-wrap: wrap;
+        flex-direction: column;
         text-align: center;
     }
+    /*
+        Our anchor elements themselves could use some tweaking.
+        For example, they're a bit too large, so let's lower
+        their font-size.
+
+        Also, notice how they are jagged. Does anyone know
+        why that is? It's due to the margin we applied earlier.
+        So, let's go ahead and remove it by applying margin: 0px;.
+
+        I think our nav is looking pretty cool. Let's move on
+        to the next section.
+    */
     .nav a {
-        color: white;
-        text-decoration: none;
-        font-size: 1.25rem;
-        padding: 20px 0px;
-        margin-right: 40px;
+        font-size: 1rem;
+        margin: 0px;
     }
 }
